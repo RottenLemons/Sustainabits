@@ -1,11 +1,14 @@
 <template>
-    <div class="flex flex-column justify-content-center" style="width: 100%; height:92vh; background-color: #588157; opacity: 0.8; background-image: radial-gradient(circle at right 0, #344e41, #588157), repeating-radial-gradient(circle at right 0, #344e41, #344e41, 40px, transparent 80px, transparent 40px); background-blend-mode: multiply;">
+    <div class="flex flex-column justify-content-center" style="width: 100%; height:94vh; background-color: #588157; opacity: 0.8; background-image: radial-gradient(circle at right 0, #344e41, #588157), repeating-radial-gradient(circle at right 0, #344e41, #344e41, 40px, transparent 80px, transparent 40px); background-blend-mode: multiply;">
         <div class="flex flex-column justify-content-center align-items-center" style="margin-top: 3em;">
             <p style="font-size: 4em; font-weight: bold; color: white; margin-top:0;">
             Data
             </p>
 
-            <DataTable showGridlines :value="users" v-model:filters="filters" paginator :rows="5" :rowsPerPageOptions="[5, 10, 20, 50]" style="width: 85%">
+            <DataTable :value="users" v-model:filters="filters" paginator :rows="5" :rowsPerPageOptions="[5, 10, 20, 50]" style="width: 85%"
+            :pt="{
+                paginator: {class: 'rounded-none'}
+            }">
                 <template #header>
                     <div class="flex justify-content-end">
                         <span class="p-input-icon-left">

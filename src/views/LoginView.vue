@@ -10,7 +10,7 @@
 
 <template>
   <main style="width: 100%;">
-    <div class="flex flex-column justify-content-center" style="width: 100%; height:92vh; background-color: #588157; opacity: 0.8; background-image: radial-gradient(circle at center center, #344e41, #588157), repeating-radial-gradient(circle at center center, #344e41, #344e41, 40px, transparent 80px, transparent 40px); background-blend-mode: multiply;">
+    <div class="flex flex-column justify-content-center" style="width: 100%; height:94vh; background-color: #588157; opacity: 0.8; background-image: radial-gradient(circle at center center, #344e41, #588157), repeating-radial-gradient(circle at center center, #344e41, #344e41, 40px, transparent 80px, transparent 40px); background-blend-mode: multiply;">
       <div class="flex flex-column align-items-center gap-5" style="width: 100%;">
 
         <p style="font-size: 4em; font-weight: bold; color: white; margin-top:0;">

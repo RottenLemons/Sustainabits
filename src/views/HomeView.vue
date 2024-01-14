@@ -7,14 +7,14 @@
   <main style="width: 100%;">
     <div class="flex align-items-center justify-content-center" style="backgroundColor: #344e41; width: 100%; height: 550px;">
       <div class="flex  flex-column align-items-center justify-content-center">
-        <p style="font-size: 5em; font-weight: bold; color: white; margin-bottom: 0;" class="font">
+        <p style="font-size: 5em; font-weight: bold; color: white; margin: 0;" class="font">
           Sustainabits
         </p>
         <p style="font-size: 1.5em; color: white;" class="font">
-          Save the planet 1 point at a time
+          Save the planet 1 bit at a time
         </p>
         <RouterLink style="text-decoration: none;" to="/signup">
-          <Button size="large" style="font-weight: bold; padding-top;: 0.925rem; padding-bottom: 0.925rem; font-size: 2em; color: white">SIGN UP</Button>
+          <Button style="font-weight: bold; padding-top;: 1.25rem; padding-bottom: 1.25rem; font-size: 2.5em; color: white">SIGN UP</Button>
         </RouterLink> 
       </div>
       <img alt="logo" src="../assets/logo.svg" width="400" height="400" />
@@ -55,7 +55,7 @@
           What are you waiting for?
         </p>
         <RouterLink style="text-decoration: none;" to="/signup">
-            <Button size="large" style="font-weight: bold; padding-top;: 0.925rem; padding-bottom: 0.925rem; font-size: 2em; color: white">SIGN UP</Button>
+          <Button style="font-weight: bold; padding-top;: 1.25rem; padding-bottom: 1.25rem; font-size: 2.5em; color: white">SIGN UP</Button>
         </RouterLink> 
       </div> 
     </div>
