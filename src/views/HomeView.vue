@@ -10,18 +10,18 @@
         <p style="font-size: 5em; font-weight: bold; color: white; margin: 0;" class="font">
           Sustainabits
         </p>
-        <p style="font-size: 1.5em; color: white;" class="font">
+        <p style="font-size: 2em; color: white; margin-top: 1em;" class="font">
           Save the planet 1 bit at a time
         </p>
         <RouterLink style="text-decoration: none;" to="/signup">
-          <Button style="font-weight: bold; padding-top;: 1.25rem; padding-bottom: 1.25rem; font-size: 2.5em; color: white">SIGN UP</Button>
+          <Button style="font-weight: bold; padding: 2rem; font-size: 2.5em; color: white">SIGN UP</Button>
         </RouterLink> 
       </div>
       <img alt="logo" src="../assets/logo.svg" width="400" height="400" />
     </div>
 
-    <div class="flex flex-column align-items-center justify-content-center" style="backgroundColor: #a3b18a; width: 100%; height: 700px;">
-      <p style="font-size: 3em; font-weight: bold; color: white; margin-bottom: 2em; margin-top: 0em;" class="font">
+    <div class="flex flex-column align-items-center justify-content-center" style="backgroundColor: #588157; width: 100%; height: 700px;">
+      <p style="font-size: 4em; font-weight: bold; color: white; margin-bottom: 2em; margin-top: 0em;" class="font">
           Gamify being eco-friendly
       </p>
       <div class="flex align-items-center justify-content-space-around gap-5">
@@ -48,14 +48,14 @@
       </div>
     </div>
     
-    <div class="flex align-items-center justify-content-center gap-5" style="backgroundColor: #588157; width: 100%; height: 600px;">
+    <div class="flex align-items-center justify-content-center gap-5" style="backgroundColor: #3a5a40; width: 100%; height: 600px;">
       <Image src="https://cdn3d.iconscout.com/3d/premium/thumb/trees-7404343-6043595.png" width="400"/> 
       <div class="flex flex-column align-items-center">
-        <p style="font-size: 3em; font-weight: bold; color: white; margin-bottom: 0.75em;" class="font">
+        <p style="font-size: 4em; font-weight: bold; color: white; margin-bottom: 0.75em; margin-top: 0.5em;" class="font">
           What are you waiting for?
         </p>
         <RouterLink style="text-decoration: none;" to="/signup">
-          <Button style="font-weight: bold; padding-top;: 1.25rem; padding-bottom: 1.25rem; font-size: 2.5em; color: white">SIGN UP</Button>
+          <Button style="font-weight: bold; padding: 2rem; font-size: 2.5em; color: white">SIGN UP</Button>
         </RouterLink> 
       </div> 
     </div>

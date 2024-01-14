@@ -56,7 +56,7 @@
 
   <RouterView />
 
-  <div class="flex align-items-center justify-content-center" style="backgroundColor: #3a5a40; width: 100%; height: 150px;">
+  <div class="flex align-items-center justify-content-center" style="backgroundColor: #344e41; width: 100%; height: 150px;">
         <p style="font-size: large; color: white;">
           Made by Mahir
         </p>
