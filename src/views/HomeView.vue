@@ -1,6 +1,9 @@
 <script setup lang="ts">
   import Image from 'primevue/image';
   import Button from 'primevue/button';
+  import { useRoute } from 'vue-router'
+  const route = useRoute()
+  const id = route.params.username;
 </script>
 
 <template>
@@ -13,9 +16,12 @@
         <p style="font-size: 2em; color: white; margin-top: 1em;" class="font">
           Save the planet 1 bit at a time
         </p>
-        <RouterLink style="text-decoration: none;" to="/signup">
+        <RouterLink v-if="typeof id === 'undefined'" style="text-decoration: none;" to="/signup">
           <Button style="font-weight: bold; padding: 2rem; font-size: 2.5em; color: white">SIGN UP</Button>
         </RouterLink> 
+        <p v-else style="font-size: 2em; color: white; margin-top: 1em;" class="font">
+          Hello {{ id }}
+        </p>
       </div>
       <img alt="logo" src="../assets/logo.svg" width="400" height="400" />
     </div>
