@@ -16,7 +16,7 @@
         <p style="font-size: 2em; color: white; margin-top: 1em;" class="font">
           Save the planet 1 bit at a time
         </p>
-        <RouterLink v-if="typeof id === 'undefined'" style="text-decoration: none;" to="/signup">
+        <RouterLink v-if="typeof id === 'undefined' || id === ''" style="text-decoration: none;" to="/signup">
           <Button style="font-weight: bold; padding: 2rem; font-size: 2.5em; color: white">SIGN UP</Button>
         </RouterLink> 
         <p v-else style="font-size: 2em; color: white; margin-top: 1em;" class="font">
