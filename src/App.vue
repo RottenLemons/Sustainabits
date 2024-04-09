@@ -1,24 +1,51 @@
 
 <script setup lang="ts">
-  import { RouterLink, RouterView } from 'vue-router'
-  // import HelloWorld from './components/HelloWorld.vue'
+  import { RouterLink, RouterView, useRouter } from 'vue-router'
   import Menubar from 'primevue/menubar';
   import Badge from 'primevue/badge';
   import Button from 'primevue/button';
   import { ref } from "vue";
+  import { useCookies } from '@vueuse/integrations/useCookies'
 
+  const cookies = useCookies()
+  const router = useRouter();
   const items = ref([
       {
-          label: 'Data',
-          icon: 'pi pi-database',
-          url: '/data'
+          label: 'Competitions',
+          icon: 'pi pi-gift',
+          url: '/competitions'
       },
       {
-          label: 'References',
-          icon: 'pi pi-link',
-          url: '/ref'
-      }
+          label: 'Events',
+          icon: 'pi pi-calendar-plus',
+          url: '/events'
+      },
+      {
+          label: 'Activities',
+          icon: 'pi pi-map',
+          url: '/activities'
+      },
+      {
+          label: 'Users',
+          icon: 'pi pi-users',
+          url: '/users'
+      },
+      {
+          label: 'Trees',
+          icon: 'pi pi-star',
+          url: '/trees'
+      },
   ]);
+  const user = ref(cookies.get('user'));
+
+  cookies.addChangeListener((event) => {
+    user.value = event.value;
+  })
+
+  const logout = () => {
+    cookies.remove('user');
+    router.push('/login');
+  }
 </script>
 
 <template>
@@ -31,7 +58,7 @@
 
           </template>
           <template #item="{ item, props, hasSubmenu, root }">
-            <RouterLink style="text-decoration: none; color: inherit;" :to="item.url!">
+            <RouterLink v-if="user" style="text-decoration: none; color: inherit;" :to="item.url!">
               <a class="flex align-items-center" v-bind="props.action">
                   <span :class="item.icon" style="color: #3a5a40"/>
                   <span class="ml-2" style="color: #3a5a40">{{ item.label }}</span>
@@ -46,9 +73,17 @@
                 <!-- <RouterLink style="text-decoration: none;" to="/signup">
                   <Button outlined v-if="!$route.meta.hideLoginSignBtns">SignUp</Button>
                 </RouterLink> -->
-                <RouterLink style="text-decoration: none;" to="/login">
+                <RouterLink v-if="!user" style="text-decoration: none;" to="/login">
                   <Button outlined>Login</Button>
-                </RouterLink>              
+                </RouterLink>    
+                
+                <RouterLink v-if="user" style="text-decoration: none;" to="/profile">
+                  <Button text rounded icon="pi pi-user"></Button>
+                </RouterLink>  
+
+                
+                <Button v-if="user" text rounded icon="pi pi-sign-out" @click="logout"></Button>
+                
               </div>
           </template>
       </Menubar>
@@ -83,5 +118,9 @@
   p {
       line-height: 1.75;
   } 
+
+  .p-menubar {
+    border-radius: 0px;
+  }
 
 </style>
